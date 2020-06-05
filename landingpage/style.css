@@ -1,0 +1,390 @@
+/*Note to me; 
+see line 148, 153
+*/
+
+html, body{
+    margin: 0;
+    font-family: 'Caladea', serif; 
+}
+
+html, body, nav a, .social-icon-container a{
+    color: #400012;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1, h3{
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav, header, .shop-container, .top-footer, .right-footer, .bottom-footer{
+    display: flex;
+}
+
+nav, header, .shop-container, .bottom-footer{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav{
+    position: fixed;
+    background-color: #fce4ec;
+    width: 100%;
+    padding: 20px;
+}
+
+nav a{
+    margin: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+nav a:hover, .prev:hover, .next:hover,.social-icon-container a:hover{
+    color: #a24a62;
+}
+
+.nav-middle a{
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 600px){
+    nav{
+        padding: 20px 5px;
+    }
+    nav a{
+        margin: 10px 5px;
+        font-size: 16px;
+    }
+}
+
+/*Header styles*/
+header{
+    height: 100vh;
+}
+
+header, .review-container-wrapper{
+    background-color: #ff94c2;
+}
+
+.header-right{
+    width: 50%;
+    height: 100%;
+}
+
+.header-left-inner{
+    position: absolute;
+    margin: auto;
+    /*subject to change based on recommendation*/width: 60%;
+    height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.shop-now-btn{
+    height: 45px;
+    width: 150px;
+    border-radius: 5px;
+    border: 2px solid #400012;
+    margin-top: 10px;
+}
+
+.shop-now-btn, .signup-btn, .more-btn{
+    color: #fce4ec;
+}
+
+.shop-now-btn, .signup-btn, .more-btn{
+    background-color: #b92c64;
+}
+
+.signup-btn:hover, .shop-now-btn:hover, .more-btn:hover{
+    background-color: #ef6191;
+    color: #511529;
+}
+
+.header-right img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 900px){
+    .shop-now-btn{
+        height: 36px;
+        width: 110px;
+    }
+}
+/*End of header styles*/
+
+/*Shop styles*/
+.shop-container-wrapper{
+    text-align: center;
+    margin: 50px 30px 30px;
+}
+
+.shop-container-wrapper h3{
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+}
+
+.shop-container{
+    width: 100%;
+}
+
+.shop-section{
+    flex: 33.3%;
+    width: 33.3%;
+    padding: 30px 30px 0px;
+}
+
+.shop-container img{
+    width: 100%;
+    height: 68%;
+}
+
+.more-btn{
+    width: 100%;
+    font-weight: 800;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+}
+
+.more-btn:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .shop-section{
+        flex: 50%;
+        width: 50%;
+    }
+    .kids-shop img, .kids-shop .more-btn{
+        width: 60%
+    }
+}
+
+@media screen and (max-width: 600px){
+    .shop-container{
+        display: block;
+    }
+    .shop-section{
+        flex: 100%;
+        width: 100%;
+    }
+    .shop-container img{
+        width: 100%;
+        height: 450px; /*subject to editing*/
+    }
+    .kids-shop img{
+        width: 100%
+    }
+   .more-btn{
+        width: 60%;
+    }
+}
+/*End of shop styles*/
+
+/*Review styles*/
+.review-container-wrapper{
+    padding: 20px;
+    /*still under contemplation*/height: 70vh;
+}
+
+.reviewContainer{
+    width: 50%;
+    /*still under contemplation*/margin: 15vh auto 10vh;
+    position: relative;
+}
+
+.reviewSlides img{
+    width: 30%; 
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.reviewSlides{
+    margin: 40px 10px;
+}
+
+/*Slides stlyle*/
+.review-fade{
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.prev, .next{
+    position: absolute;
+    top: 30%;
+    width: 0 auto;
+    padding: 16px;
+    margin: 0 -50px;
+    color: #fce4ec;
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.6s ease;
+    user-select: none;    
+}
+
+.next{
+    right: 0;
+}
+
+.current-slide-cont{
+    margin: auto;
+    width: 100px;
+}
+
+.circle{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #400012;
+    border-radius:  50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .circle:hover{
+    background-color: #a24a62;
+}
+
+@media screen and (max-width: 600px){
+    .review-container-wrapper{
+        /*still under contemplation*/height: 100%;
+    }
+    
+    .reviewContainer{
+        /*still under contemplation*/margin: 0.15% auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+  .prev, .next{
+      font-size: 20px
+    }
+  .reviewContainer{
+    width: 80%;
+}
+}
+
+/*End of slides stlyle*/
+/*End of review styles*/
+
+/*Footer styles*/
+
+li{
+    list-style: none;
+}
+
+ul li:first-child{
+    font-weight: 900;
+}
+
+span{
+    margin: 0 10px;
+}
+
+footer{
+    padding: 20px 20px 5px;
+    text-align: center;
+}
+
+.top-footer{
+    width: 100%;
+    margin: 20px 0 50px;
+    justify-content: space-evenly;
+}
+
+.left-footer{
+    width: 10%;
+    flex: 10%;
+}
+
+.signup-container{
+    margin-left: 10px;
+}
+
+.email{
+    width: 280px;
+}
+
+.email, .signup-btn{
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #400012;
+}
+
+.signup-btn{
+    margin-left: -10px;
+}
+
+.social-icon-container a{
+    margin: 5px;
+    font-size: 22px;
+}
+
+.right-footer-wrapper{ 
+    width: 10%;
+    flex: 10%;
+    margin: auto;
+}
+
+.right-footer{
+    text-align: justify;
+}
+
+@media screen and (max-width: 900px) {
+    .bottom-footer span{
+        font-size: 14px;
+    }
+    .top-footer{
+        flex-wrap: wrap;
+    }
+    .right-footer-wrapper, .left-footer{
+        width: 100%;
+        flex: 100%;    
+    }
+    .right-footer{
+        width: 50%;
+        margin: 30px auto 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bottom-footer span{
+        font-size: 12px;
+    }
+    .right-footer{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .bottom-footer{
+        margin-top: 100px;
+    }
+}
+
+/*End of footer styles*/
+
+

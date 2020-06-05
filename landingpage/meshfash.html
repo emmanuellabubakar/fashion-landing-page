@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mesh Fash Landing page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caladea:ital@1&family=Frank+Ruhl+Libre:wght@500&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <nav>
+            <div class="nav-left">
+                <a href="#shop-container">SHOP</a>
+                <a href="#review-container-wrapper">REVIEWS</a>
+                <a href="#contact-container">CONTACT</a>
+            </div>
+            <div class="nav-middle">
+                <a href="#header">MESH FASH</a>
+            </div>
+            <div class="nav-right">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+
+        <header id="header">
+            <div class="header-left">
+                <div class="header-left-inner">
+                    <h1>MESH FASH</h1>
+                    <p>
+                        Fashion at it's best
+                        <br>Style that never goes out
+                    </p>
+                    <button class="shop-now-btn">SHOP NOW</button>
+                </div>
+            </div>
+            <div class="header-right">
+                <img src="https://images.unsplash.com/photo-1553335719-239c2726dd15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="A model in a cloth">
+            </div>
+        </header>
+
+        <div id="shop-container" class="shop-container-wrapper">
+            <h3>SHOP PREVIEW</h3>
+            <div class="shop-container">
+                <div class="men-shop shop-section">
+                    <img src="https://images.unsplash.com/photo-1529790424014-6c967f42b81a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="A male model wearing an orange shirt, trouser, long jacket">
+                    <p class="price">&#8358; 25,000</p>
+                    <button class="more-btn"><a hre="#" >More men's wear</a></button>
+                </div>
+                <div class="women-shop shop-section">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60
+                    " alt="A famale model wearing a red gown with flower imprints.">
+                    <p class="price">&#8358; 15,000</p>
+                    <button class="more-btn"><a hre="#" >More women's wear</a></button>
+                </div>
+                <div class="kids-shop shop-section">
+                    <img src="https://images.unsplash.com/photo-1559412831-9f6d2772dba7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="A young girl wearing a bridal white gown.">
+                    <p class="price">&#8358; 10,000</p>
+                    <button class="more-btn"><a hre="#" >More kid's wear</a></button>
+                </div>
+            </div>            
+        </div>
+
+        <div id="review-container-wrapper" class="review-container-wrapper">
+            <div id="review-container" class="reviewContainer">
+                <div class="review1 reviewSlides review-fade">
+                    <img src="https://images.unsplash.com/flagged/photo-1562088440-ee50e79b2f98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="A little buy that is looking happy">
+                    <div class="review-text">
+                        <h3>Adam Samuel</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+                    </div>
+                </div>
+                <div class="review2 reviewSlides review-fade">
+                    <img src="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                    <div class="review-text">
+                        <h3>Victoria David</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+                    </div>
+                </div>
+                <div class="review3 reviewSlides review-fade">
+                    <img src="https://images.unsplash.com/photo-1508341591423-4347099e1f19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+                    <div class="review-text">
+                        <h3>Olumide Vicent</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="current-slide-cont">
+                    <span class="circle" onclick="currentSlide(1)"></span>
+                    <span class="circle" onclick="currentSlide(2)"></span>
+                    <span class="circle" onclick="currentSlide(3)"></span>
+                </div>                
+            </div>
+        </div>
+        
+
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n){ 
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var reviewSlides = document.getElementsByClassName("reviewSlides");
+            var circle = document.getElementsByClassName("circle");
+            if (n > reviewSlides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = reviewSlides.length}
+            for (i = 0; i < reviewSlides.length; i++) {
+                reviewSlides[i].style.display = "none";  
+            }
+            for (i = 0; i < circle.length; i++) {
+                circle[i].className = circle[i].className.replace(" active", "");
+                }
+                reviewSlides[slideIndex-1].style.display = "flex";  
+                circle[slideIndex-1].className += " active";
+        }
+
+    </script>
+
+</body>
+
+<footer>
+    <div class="top-footer">
+        <div class="left-footer">
+            <div id="contact-container" class="contact-container">
+                <div class="social-icon-container">
+                    <a href="#"><i class="fab fa-whatsapp social-icon"></i></a>
+                    <a href="#"><i class="fab fa-facebook social-icon"></i></a>
+                    <a href="#"><i class="fab fa-twitter social-icon"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="number-address-container">
+                    <h4>Phone: +23409088945621</h4>
+                    <h4>Address: 21, Alibabu Street, Ajah, Lagos.</h4>
+                </div>
+            </div>
+            <div class="signup-container">
+                <h3>Sign up to place order</h3>
+                <form action="#" class="signup-form">
+                    <input type="email" name="email" placeholder="Your Email" class="email">
+                    <input type="submit" value="Sign up" class="signup-btn">
+                </form>
+            </div>
+        </div>
+        <div class="right-footer-wrapper">
+            <div class="right-footer">
+                <ul>
+                    <li>Account</li>
+                    <li>Manage Account</li>
+                    <li>Shopping Cart</li>
+                    <li>Orders & Returns</li>
+                </ul>
+                <ul>
+                    <li>Company</li>
+                    <li>About</li>
+                    <li>Contact & FAQ</li>
+                </ul>
+                <ul>
+                    <li>Shop</li>
+                    <li>Men wears</li>
+                    <li>Women wears</li>
+                    <li>Kids wears</li>
+                    <li>Denim</li>
+                    <li>Hoodies</li>
+                    <li>Bags</li>
+                    <li>Shoes</li>
+                    <li>Glasses</li>
+                    <li>More</li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+    
+    <div class="bottom-footer">
+        <span>&copy; 2020 All Rights Reserved</span>
+        <span>Privacy Policy</span>
+        <span>Terms of Services</span>
+        <span>Vendor Code of Conduct</span>
+        <span>Sitemap Pages</span>
+        <span>Sitemap Products</span>
+    </div>
+</footer>
+
+</html>
